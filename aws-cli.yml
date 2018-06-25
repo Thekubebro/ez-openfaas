@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+functions:
+  aws-cli:
+    lang: dockerfile
+    handler: ./aws-cli
+    image: aws-cli
+    environment:
+      AWS_ACCESS_KEY_ID: your-access-key
+      AWS_SECRET_ACCESS_KEY: your-secret-key

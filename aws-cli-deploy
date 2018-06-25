@@ -1,0 +1,3 @@
+faas-cli build -f aws-cli.yml
+faas-cli deploy -f aws-cli.yml
+curl -d "--version" http://localhost:8080/function/aws-cli

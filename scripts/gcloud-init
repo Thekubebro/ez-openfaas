@@ -1,0 +1,3 @@
+docker run -it google/cloud-sdk:latest /bin/bash && gcloud init && docker cp gcloud:/root/.config/gcloud ./gcloud
+
+
