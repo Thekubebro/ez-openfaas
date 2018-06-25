@@ -1,0 +1,2 @@
+POD=$(kubectl get pods -l app=wiggly-gnat-chaoskube --namespace default --output name)
+    kubectl logs -f $POD --namespace=default
