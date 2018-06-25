@@ -1,0 +1,3 @@
+kubectl create clusterrolebinding "cluster-admin-$(whoami)" \
+  --clusterrole=cluster-admin \
+  --user="$(gcloud config get-value core/account)"
