@@ -1,0 +1,2 @@
+faas build -f nmap.yml \
+ && faas deploy -f nmap.yml

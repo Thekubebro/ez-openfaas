@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://35.232.180.50:8080
+
+functions:
+  nmap:
+    lang: dockerfile
+    handler: ./nmap
+    image: nmap
