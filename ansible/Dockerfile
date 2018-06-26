@@ -16,18 +16,17 @@ RUN apk --no-cache add curl \
     && cp /usr/bin/fwatchdog /home/app \
     && apk del curl --no-cache
     
-# Add non root user
-
-RUN addgroup -S app && adduser -S -g app app
-
-RUN chown app /home/app
-
-WORKDIR /home/app
-
-USER app
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip \
+    build-base \
+  && pip install --upgrade pip \
+  && pip install ansible
+  && rm -rf /var/cache/apk/*
 
 # Populate example here - i.e. "cat", "sha512sum" or "node index.js"
-ENV fprocess="cat"
+ENV fprocess="ansible -m ping all"
 # Set to true to see request in function logs
 ENV write_debug="false"
 
