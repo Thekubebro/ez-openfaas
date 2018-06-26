@@ -1,6 +1,6 @@
 provider:
   name: faas
-  gateway: http://127.0.0.1:8080
+  gateway: http://35.232.180.50:8080
 
 functions:
   shrink:
